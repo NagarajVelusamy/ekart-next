@@ -2,8 +2,16 @@ import Link from "next/link";
 
 export const navLinks = [
   {
-    title:"products",
-    path:"/products"
+    title: "products",
+    path: "/products"
+  },
+  {
+    title: "cart",
+    path: "/cart"
+  },
+  {
+    title: "signin",
+    path: "/signin"
   },
 ];
 
@@ -11,9 +19,17 @@ const NavBar = () => {
   return (
     <nav className="nav">
       <div className="container nav-wrapper">
+        <div>
+          <Link
+            href="/"
+            className="nav-logo"
+          >
+            EKart
+          </Link>
+        </div>
         <ul className="nav-links">
           {
-            navLinks.map((navItem,idx)=>(
+            navLinks.map((navItem, idx) => (
               <li
                 key={idx}
                 className="nav-link"
@@ -26,26 +42,6 @@ const NavBar = () => {
             ))
           }
         </ul>
-        <div>
-          <Link
-            href="/"
-            className="nav-logo"
-          >
-          EKart
-          </Link>
-        </div>
-
-        <div className="nav-actions">
-          <div className="nav-actions__profile nav-item">Profile</div>
-          <div className="nav-actions__cart">
-            <Link
-              href="/cart"
-              className="nav-item"
-            >
-              cart
-            </Link>
-          </div>
-        </div>
       </div>
     </nav>
   );
