@@ -14,5 +14,4 @@ const handler = async (req, res) => {
   }
 };
 
-export default connectDB(handler); 
-   
+export default connectDB(handler);
