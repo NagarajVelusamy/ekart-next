@@ -1,5 +1,6 @@
 import Head from "next/head";
-import "../styles/index.scss";
+import Layout from "components/common/Layout/Layout";
+import "styles/index.scss";
 
 export default function App({ Component, pageProps }) {
   return (
@@ -15,8 +16,9 @@ export default function App({ Component, pageProps }) {
           href="/favicon.ico"
         />
       </Head>
-      <Component {...pageProps} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </>
   );
-
 }
