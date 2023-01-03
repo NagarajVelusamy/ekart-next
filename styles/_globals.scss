@@ -25,3 +25,8 @@ li {
 a {
   text-decoration: none;
 }
+
+.container {
+  width: min(95%, 1300px);
+  margin-inline: auto;
+}

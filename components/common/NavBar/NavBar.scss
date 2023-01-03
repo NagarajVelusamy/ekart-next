@@ -1,0 +1,47 @@
+@use "styles/variables" as *;
+
+.nav {
+    --nav-links-gap: 30px;
+    --nav-link-fs: 14px;
+
+    background-color: $nav-bg;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+
+    &-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-block: 20px;
+    }
+
+    &-links {
+        display: flex;
+        align-items: center;
+        gap: var(--nav-links-gap);
+    }
+
+    .nav-item {
+        color: #000;
+        font-size: var(--nav-link-fs);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    &-logo {
+        font-size: 20px;
+        color: #000;
+    }
+
+    &-actions {
+        display: flex;
+        align-items: center;
+        gap: var(--nav-links-gap);
+
+        &__item {
+            color: #000;
+            font-size: var(--nav-link-fs);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+    }
+}

@@ -1,2 +1,3 @@
 @use "./globals";
-@use "./variables" as *;
+
+@use "components/common/NavBar/NavBar.scss";
