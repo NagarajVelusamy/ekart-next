@@ -1,0 +1,15 @@
+.product-price {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.product-card-btns {
+    display: flex;
+    gap: 10px;
+}
+
+.product-card__btn {
+    cursor: pointer;
+    background: none;
+    border: none;
+}

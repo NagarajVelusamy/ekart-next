@@ -1,13 +1,20 @@
 import Link from "next/link";
-import { ShoppingCart, Login } from "@mui/icons-material";
+import { ShoppingCartOutlined, Login, FavoriteBorder } from "@mui/icons-material";
 
 export const navLinks = [
   {
-    title: <ShoppingCart fontSize="small" />,
+    title:"wishlist",
+    icon: <FavoriteBorder fontSize="small" />,
+    path: "/wishlist"
+  },
+  {
+    icon: <ShoppingCartOutlined fontSize="small" />,
+    title:"cart",
     path: "/cart"
   },
   {
-    title: <Login fontSize="small" />,
+    title:"sign-in",
+    icon: <Login fontSize="small" />,
     path: "/signin"
   },
 ];
@@ -34,7 +41,11 @@ const NavBar = () => {
                 <Link
                   href={navItem.path}
                   className="nav-item"
-                >{navItem.title}</Link>
+                >
+                  {navItem.icon}
+                  <span>{navItem.title}</span>
+                  
+                </Link>
               </li>
             ))
           }

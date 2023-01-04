@@ -5,6 +5,7 @@ const connectDB = handler => async (req, res) => {
     // Use current db connection
     return handler(req, res);
   }
+  mongoose.set("strictQuery", false);
   // Use new db connection
   await mongoose.connect(process.env.MONGODB_URL, {
     useUnifiedTopology: true,

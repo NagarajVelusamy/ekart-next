@@ -1,4 +1,4 @@
-import ProductList from "components/productList/ProductList";
+import ProductList from "components/ProductList/ProductList";
 import Head from "next/head";
 import { serializeData } from "utils/serializeData";
 
