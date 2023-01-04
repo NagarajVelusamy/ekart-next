@@ -1,16 +1,13 @@
 import Link from "next/link";
+import { ShoppingCart, Login } from "@mui/icons-material";
 
 export const navLinks = [
   {
-    title: "products",
-    path: "/products"
-  },
-  {
-    title: "cart",
+    title: <ShoppingCart fontSize="small" />,
     path: "/cart"
   },
   {
-    title: "signin",
+    title: <Login fontSize="small" />,
     path: "/signin"
   },
 ];
